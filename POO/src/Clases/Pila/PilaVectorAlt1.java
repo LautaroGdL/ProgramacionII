@@ -44,6 +44,18 @@ public class PilaVectorAlt1 {
         }
     };
 
+    /*public void eliminarElemPorPosicion(){
+
+        if (estaVacia()){
+            System.out.printf("La lista esta vacia.");
+        }
+        else{
+            for (int i = 0; i < ; i++) {
+
+            }
+        }
+    };*/
+
     public void mostrarElem() {
         for (int i = pila.size() - 1; i >= 0; i--) {
             System.out.println("El elemento " + i + " tiene como valor: " + pila.get(i));
