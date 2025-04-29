@@ -1,13 +1,37 @@
 package Clases.Cola;
 
-public interface Colas {
+public abstract class Colas implements ColasInterface {
 
-    public void crearCola();
-    public void Encolar(int elemento);
-    public void Desencolar();
-    public int Frente();
-    public boolean estaVacia();
-    public boolean estaLlena();
-    public void verCola();
+    int[] datos;
+    public int frente, fin, cantidad, capacidad;
+    public Colas(int capacidad){
 
+    }
+
+
+
+    @Override
+    public void Encolar(int elemento) {
+        if (cantidad == capacidad){
+            System.out.println("");
+        }
+    }
+
+    @Override
+    public void Desencolar() {
+        int auxiliar;
+        if (cantidad == 0){
+            System.out.println("");
+        }
+        else {
+            auxiliar = datos[frente];
+            frente = (frente + 1) % capacidad;
+            if (frente == fin){
+                fin = -1;
+                frente = 0;
+            }
+            cantidad--;
+            System.out.println("");
+        }
+    }
 }
